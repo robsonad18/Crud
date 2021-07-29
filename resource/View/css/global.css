@@ -1,0 +1,105 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+#login {
+    max-width: 95%;
+    margin: auto;
+    width: 380px;
+    margin-top: 5%;
+}
+
+#logo-cliente {
+    max-width: 100%;
+    margin: auto;
+    width: 700px;
+}
+#logo-santri {
+    max-width: 50%;
+    margin: auto;
+    width: 380px;
+}
+
+[data-form] {
+    width: 600px;
+    height: auto;
+    padding: 10px;
+    justify-content: center;
+    border: 1px solid #bbb;
+    border-radius: 20px;
+    transition: 0.6s;
+}
+
+[data-form]:hover {
+    border-radius: 0px;
+}
+
+[data-form] > form {
+    flex-wrap: wrap;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+h4 {
+    font-weight: bolder;
+    text-align: center;
+    font-size: 20pt;
+}
+
+.items > div > input:nth-child(1) {
+    margin-right: 20px;
+}
+
+   table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      th, td {
+        text-align: left;
+        padding: 8px;
+        border-bottom: 1px solid #ddd;
+      }
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+[data-table] {
+    width: 1200px;
+    height: auto;
+    padding: 10px;
+    margin: 10px auto;
+}
+
+[data-404], [data-logged] {
+    width: 600px;
+    margin: 10px auto;
+    text-align: center;
+    height: 250px;
+    border: 1px solid #bbb;
+    border-radius: 20px;
+    transition: 0.6s;
+    padding: 20px;
+}
+
+
+[data-404] > h1, [data-logged] > h1 {
+    font-size: 25pt;
+    font-weight: bolder;
+}
+
+[data-404]:hover, [data-logged]:hover {
+    border-radius: 0px;
+}
+
+table tr > td:nth-child(4) {
+    width: 120px;
+}

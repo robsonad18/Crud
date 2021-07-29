@@ -1,0 +1,35 @@
+<div>
+    <div data-form class="w3-margin">
+
+        <h4>Cadastro de usuários</h4>
+
+        <form method="post" data-form-register>   
+            <div>
+                <label>Nome</label>
+                <input type="text" name="name" autofocus required class="w3-input w3-block w3-border">
+            </div><br/>
+            
+            <div>
+                <label>Login</label>
+                <input type="text" name="user" required class="w3-input w3-block w3-border">
+            </div><br />
+            
+            <div>
+                <label>Ativo</label>
+                <select class="w3-input w3-block w3-border" required name="ativo">
+                    <option checked value="S">Ativo</option>
+                    <option value="N">Inativo</option>
+                </select>
+            </div><br />
+            
+            <ul>
+                {{listAuthorization}}
+            </ul><br />
+            
+            <button type="submit" class="w3-button w3-theme w3-margin-top w3-margin-bottom">Salvar</button>
+            <a href="{{SOURCE}}/listagem">Voltar</a>
+            
+        </form>
+
+    </div>
+</div>

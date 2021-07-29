@@ -1,0 +1,22 @@
+<div data-table>
+    <div id="lista_usuarios" class="w3-margin">
+        <form method="post" action="{{SOURCE}}/pesquisa">
+            <input class="w3-input w3-border w3-margin-top" data-search type="text" name="search" placeholder="Nome">
+            <button class="w3-button w3-theme w3-margin-top">Buscar</button>
+        </form>
+
+            <a href="{{SOURCE}}/cadastro">Cadastrar novo usuário</a>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</td>
+                        <th>Login</td>
+                        <th>Opções</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{trUsers}}
+                </tbody>
+            </table>
+    </div>
+</div>

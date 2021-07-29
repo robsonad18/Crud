@@ -1,0 +1,32 @@
+<div>
+    <div data-form class="w3-margin">
+        <h4>Edição de usuários</h4>
+        <form method="post" data-form-update>
+            <input name="id" type="hidden" value="{{id}}">
+            <div>
+                <label>Nome</label>
+                <input type="text" name="name" value="{{name}}" autofocus required class="w3-input w3-block w3-border">
+            </div><br />
+
+            <div>
+                <label>Login</label>
+                <input type="text" name="user" value="{{user}}" required class="w3-input w3-block w3-border">
+            </div><br />
+
+            <div>
+                <label>Ativo</label>
+                <select class="w3-input w3-block w3-border" required name="ativo">
+                    <option {{selected1}} value="S">Ativo</option>
+                    <option {{selected2}} value="N">Inativo</option>
+                </select>
+            </div><br />
+
+            <ul>
+                {{listAuthorization}}
+            </ul><br />
+
+            <button type="submit" class="w3-button w3-theme w3-margin-top w3-margin-bottom">Salvar</button>
+            <a href="{{SOURCE}}/listagem">Voltar</a>
+        </form>
+    </div>
+</div>
