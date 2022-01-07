@@ -8,13 +8,18 @@ use App\Controller\Pages\Page404;
 use App\Controller\Pages\Register;
 use App\Controller\Pages\Update;
 
+/**
+ * Arquivo INDEX do projeto
+ */
 new class
 {
+    /**
+     * Construtor da classe
+     */
     public function __construct()
     {
-        if (!isset($_GET)) {
-            return;
-        }
+        if (!isset($_GET)) return;
+        
         $url        = explode('/', $_GET['url'] ?? '');
         $realName   = $url[0];
 
