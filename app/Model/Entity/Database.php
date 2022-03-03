@@ -15,7 +15,7 @@ class Database
 	 * Retorna a instancia de PDO
 	 * @return PDO 
 	 */
-	public static function get():PDO
+	static function get():PDO
 	{
 		try {
 			$pdo = new \PDO('mysql:host=localhost;dbname=teste_php', 'root', '', [

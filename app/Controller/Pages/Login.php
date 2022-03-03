@@ -18,7 +18,7 @@ class Login extends Page
      * 
      * @var App\Controller\Pages\funciton
      */
-    public static function getLogin()
+    static function getLogin()
     {
         if (Session::isLogged() === true) {
             $content = View::render('pages/logged', [

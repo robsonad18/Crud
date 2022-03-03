@@ -17,7 +17,7 @@ class SearchUser
      * 
      * @return false|array 
      */
-    public static function proccess()
+    static function proccess()
     {
         try {
             if (!isset($_POST)) {

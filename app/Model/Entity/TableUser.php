@@ -23,7 +23,7 @@ abstract class TableUser
 	 * 
 	 * @return array 
 	 */
-	public static function get(array $input): array
+	static function get(array $input): array
 	{
 		try {
 			$query = Database::get()->prepare("SELECT * FROM usuarios WHERE LOGIN = ? AND SENHA = ? AND ATIVO = 'S'");
@@ -46,7 +46,7 @@ abstract class TableUser
 	 * 
 	 * @return array 
 	 */
-	public static function getUserById(int $id): array
+	static function getUserById(int $id): array
 	{
 		try {
 			$query = Database::get()->prepare("SELECT * FROM usuarios WHERE USUARIO_ID = ?");
@@ -65,7 +65,7 @@ abstract class TableUser
 	 * 
 	 * @return array 
 	 */
-	public static function getAll(): array
+	static function getAll(): array
 	{
 		try {
 			$query = Database::get()->prepare("SELECT * FROM usuarios ORDER BY USUARIO_ID DESC");
@@ -84,7 +84,7 @@ abstract class TableUser
 	 * 
 	 * @return bool 
 	 */
-	public static function post(array $input): bool
+	static function post(array $input): bool
 	{
 		try {
 			$instance  = Database::get();
@@ -110,7 +110,7 @@ abstract class TableUser
 	 * 
 	 * @return mixed 
 	 */
-	public static function lastInsertId()
+	static function lastInsertId()
 	{
 		return self::$getIdInset;
 	}
@@ -124,7 +124,7 @@ abstract class TableUser
 	 * @param mixed $value 
 	 * @return array 
 	 */
-	public static function search($value): array
+	static function search($value): array
 	{
 		try {
 			$query  = Database::get()->prepare("SELECT * FROM usuarios WHERE NOME_COMPLETO LIKE ? LIMIT 5");
@@ -143,7 +143,7 @@ abstract class TableUser
 	 * 
 	 * @return bool 
 	 */
-	public static function put(array $input): bool
+	static function put(array $input): bool
 	{
 		try {
 			$query = Database::get()->prepare('UPDATE usuarios SET LOGIN = ?, NOME_COMPLETO = ?, ATIVO = ? WHERE USUARIO_ID = ?');
@@ -165,7 +165,7 @@ abstract class TableUser
 	 * 
 	 * @return bool 
 	 */
-	public static function delete(int $id): bool
+	static function delete(int $id): bool
 	{
 		try {
 			$query = Database::get()->prepare('DELETE FROM usuarios WHERE USUARIO_ID = ?');

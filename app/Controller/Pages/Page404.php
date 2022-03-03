@@ -16,7 +16,7 @@ class Page404 extends Page
      * 
      * @var App\Controller\Pages\funciton
      */
-    public static function get404()
+    static function get404()
     {
         $content = View::render('pages/404', [
             'title'         => 'Pagina não encontrada - 404',

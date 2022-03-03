@@ -19,11 +19,10 @@ class Register extends Page
      * 
      * @var App\Controller\Pages\funciton
      */
-    public static function getForm()
+    static function getForm()
     {
-        if (Session::isLogged() === false) {
-            return Login::getLogin();
-        }
+        if (Session::isLogged() === false) return Login::getLogin();
+        
         $authorizations = [];
 
         foreach (TableKey::getAll() as $value) {

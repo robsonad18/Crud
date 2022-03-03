@@ -20,11 +20,10 @@ class Listing extends Page
      * 
      * @var App\Controller\Pages\funciton
      */
-    public static function getTable()
+    static function getTable()
     {
-        if (Session::isLogged() === false) {
-            return Login::getLogin();
-        }
+        if (Session::isLogged() === false) return Login::getLogin();
+        
         $valueUser = [];
 
         $users = !empty($_GET['busca']) ? TableUser::search($_GET['busca']) : TableUser::getAll();

@@ -33,7 +33,7 @@ class Page
      * 
      * @var App\Controller\Pages\funciton
      */
-    public static function getPage(string $title, $content)
+    static function getPage(string $title, $content)
     {
         return View::render('pages/page', [
             'title'   => $title,

@@ -14,7 +14,7 @@ use App\Utils\Session;
 class UserLogin
 {
 
-    public static function proccess()
+    static function proccess():bool
     {
         try {
             if (!isset($_POST) || $_POST === null) {

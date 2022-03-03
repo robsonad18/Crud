@@ -27,7 +27,7 @@ class View
      * @param mixed $view 
      * @return void 
      */
-    public static function render(string $view, array $vars = [])
+    static function render(string $view, array $vars = [])
     {
         $contentView = self::getContentsView($view);
 

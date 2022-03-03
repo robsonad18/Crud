@@ -19,7 +19,7 @@ abstract class TableAuthorization
      * 
      * @return array|void 
      */
-    public static function getAll(): array
+    static function getAll(): array
     {
         try {
             $query = Database::get()->prepare("SELECT * FROM autorizacoes");
@@ -39,7 +39,7 @@ abstract class TableAuthorization
      * @param int $idUser 
      * @return array|void 
      */
-    public static function get(int $idUser): array
+    static function get(int $idUser): array
     {
         try {
             $query = Database::get()->prepare("SELECT * FROM autorizacoes WHERE USUARIO_ID = ?");
@@ -61,7 +61,7 @@ abstract class TableAuthorization
      * @param array $input 
      * @return bool|void 
      */
-    public static function newAuthorization(int $idUser, array $input)
+    static function newAuthorization(int $idUser, array $input)
     {
         try {
             $queryDelete = Database::get()->prepare('DELETE FROM autorizacoes WHERE USUARIO_ID = ?');
@@ -90,7 +90,7 @@ abstract class TableAuthorization
      * @param string $name 
      * @return bool 
      */
-    public static function post(int $idUser, string $name): bool
+    static function post(int $idUser, string $name): bool
     {
         try {
             $query = Database::get()->prepare('INSERT INTO autorizacoes(USUARIO_ID, CHAVE_AUTORIZACAO)VALUES(? , ?)');

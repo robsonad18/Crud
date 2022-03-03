@@ -17,7 +17,7 @@ abstract class Session
      * @param string $user 
      * @return void 
      */
-    public static function createSession(string $user)
+    static function createSession(string $user)
     {
         if (!isset($_SESSION) && !headers_sent()) {
             session_start();
@@ -34,7 +34,7 @@ abstract class Session
      * 
      * @return bool 
      */
-    public static function isLogged(): bool
+    static function isLogged(): bool
     {
         if (!isset($_SESSION) && !headers_sent()) {
             session_start();
@@ -54,7 +54,7 @@ abstract class Session
      * 
      * @return bool 
      */
-    public static function destroy(): bool
+    static function destroy(): bool
     {
         if (!isset($_SESSION) && !headers_sent()) {
             session_start();

@@ -15,7 +15,7 @@ class SessionDestroy
      * Processa operação
      * 
      */
-    public static function proccess()
+    static function proccess()
     {
         if ((Session::destroy()) === false) {
             echo json_encode([

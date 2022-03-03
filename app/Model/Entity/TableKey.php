@@ -22,7 +22,7 @@ abstract class TableKey
      * 
      * @return array 
      */
-    public static function get(int $id): array
+    static function get(int $id): array
     {
         try {
             $query = Database::get()->prepare("SELECT * FROM chave WHERE id = ?");
@@ -44,7 +44,7 @@ abstract class TableKey
      * 
      * @return array 
      */
-    public static function getAll(): array
+    static function getAll(): array
     {
         try {
             $query = Database::get()->prepare("SELECT * FROM chave");

@@ -22,16 +22,12 @@ class Update extends Page
      * 
      * @var App\Controller\Pages\funciton
      */
-    public static function getForm()
+    static function getForm()
     {
-        if (Session::isLogged() === false) {
-            return Login::getLogin();
-        }
-
-        if (!isset($_GET['id'])) {
-            throw new \Exception('ID não foi especificado');
-        }
-
+        if (Session::isLogged() === false) return Login::getLogin();
+        
+        if (!isset($_GET['id'])) throw new \Exception('ID não foi especificado');
+        
         // Retorna o usuario a ser editado
         $userCurrent            = TableUser::getUserById($_GET['id']);
         $authorizationsCurrent  = array_column(TableAuthorization::get($_GET['id']), 'CHAVE_AUTORIZACAO');
@@ -59,6 +55,6 @@ class Update extends Page
             'selected2'          => $userCurrent['ATIVO'] === 'N' ? 'selected' : ''
         ]);
 
-        return parent::getPage('Cadastro', $content);
+        return parent::getPage('Edição', $content);
     }
 }

@@ -18,7 +18,7 @@ class RegisterUser
      * 
      * @return bool 
      */
-    public static function proccess()
+    static function proccess()
     {
         try {
             if (!isset($_POST) || $_POST === null) {
